@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class ViewController: UIViewController {
 
@@ -16,6 +17,8 @@ class ViewController: UIViewController {
 
 
     @IBAction func OpenSwiftUIAction(_ sender: Any) {
+        let vc = UIHostingController(rootView: PhotosList())
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 
