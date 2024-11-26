@@ -19,6 +19,9 @@ struct PhotosList: View {
         .onAppear(perform: {
             photosViewModel.input = .getPhotos
         })
+        .onLoadingState(photosViewModel.$loadingState) {
+            ActivityIndicator()
+        }
         .navigationTitle("Home")
     }
 }

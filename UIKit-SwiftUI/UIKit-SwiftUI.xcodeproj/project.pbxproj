@@ -13,6 +13,8 @@
 		4A16B5552A8BA79E0044E480 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A16B5532A8BA79E0044E480 /* Main.storyboard */; };
 		4A16B5572A8BA7A10044E480 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A16B5562A8BA7A10044E480 /* Assets.xcassets */; };
 		4A16B55A2A8BA7A10044E480 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A16B5582A8BA7A10044E480 /* LaunchScreen.storyboard */; };
+		4A2DA72B2CF637DB003CB79A /* LoadingStateModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2DA72A2CF637CD003CB79A /* LoadingStateModifier.swift */; };
+		4A2DA72D2CF6383B003CB79A /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2DA72C2CF63832003CB79A /* ActivityIndicator.swift */; };
 		4A5E6FFD2A8D2C2B002EEF5B /* SamplePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5E6FFC2A8D2C2B002EEF5B /* SamplePhoto.swift */; };
 		4A5E70002A8D2D8D002EEF5B /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5E6FFF2A8D2D8D002EEF5B /* NetworkRouter.swift */; };
 		4A5E70032A8D2E37002EEF5B /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5E70022A8D2E37002EEF5B /* ErrorHandler.swift */; };
@@ -31,6 +33,8 @@
 		4A16B5562A8BA7A10044E480 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A16B5592A8BA7A10044E480 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A16B55B2A8BA7A10044E480 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A2DA72A2CF637CD003CB79A /* LoadingStateModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingStateModifier.swift; sourceTree = "<group>"; };
+		4A2DA72C2CF63832003CB79A /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		4A5E6FFC2A8D2C2B002EEF5B /* SamplePhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplePhoto.swift; sourceTree = "<group>"; };
 		4A5E6FFF2A8D2D8D002EEF5B /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
 		4A5E70022A8D2E37002EEF5B /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
@@ -70,6 +74,7 @@
 		4A16B54C2A8BA79E0044E480 /* UIKit-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				4A2DA7292CF637B9003CB79A /* ViewModifiers */,
 				4A5E70072A8D387D002EEF5B /* SwiftUIViews */,
 				4A5E70042A8D36B7002EEF5B /* ViewModels */,
 				4A5E70012A8D2DFD002EEF5B /* ErrorHandler */,
@@ -84,6 +89,15 @@
 				4A16B55B2A8BA7A10044E480 /* Info.plist */,
 			);
 			path = "UIKit-SwiftUI";
+			sourceTree = "<group>";
+		};
+		4A2DA7292CF637B9003CB79A /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				4A2DA72C2CF63832003CB79A /* ActivityIndicator.swift */,
+				4A2DA72A2CF637CD003CB79A /* LoadingStateModifier.swift */,
+			);
+			path = ViewModifiers;
 			sourceTree = "<group>";
 		};
 		4A5E6FFB2A8D2C17002EEF5B /* Model */ = {
@@ -203,6 +217,8 @@
 				4A5E6FFD2A8D2C2B002EEF5B /* SamplePhoto.swift in Sources */,
 				4A16B5522A8BA79E0044E480 /* ViewController.swift in Sources */,
 				4A5E70002A8D2D8D002EEF5B /* NetworkRouter.swift in Sources */,
+				4A2DA72D2CF6383B003CB79A /* ActivityIndicator.swift in Sources */,
+				4A2DA72B2CF637DB003CB79A /* LoadingStateModifier.swift in Sources */,
 				4A5E700B2A8D38E1002EEF5B /* PhotoViewModel.swift in Sources */,
 				4A5E70092A8D3892002EEF5B /* PhotosList.swift in Sources */,
 				4A5E700D2A8D3A04002EEF5B /* PhotoCell.swift in Sources */,

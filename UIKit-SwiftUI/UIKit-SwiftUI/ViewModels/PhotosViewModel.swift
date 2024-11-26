@@ -11,7 +11,20 @@ import Combine
 enum LoadingState {
     case idle
     case loading
-    case failed(ErrorHandler)
+    case failed(String)
+}
+
+
+public struct IdentifiableObject<T: Hashable>: Identifiable {
+    public var id: Int {
+        return value.hashValue
+    }
+    
+    public let value: T
+    
+    public init(_ value: T) {
+        self.value = value
+    }
 }
 
 class PhotosViewModel: ObservableObject {
@@ -50,7 +63,7 @@ class PhotosViewModel: ObservableObject {
                 }
             case .failure(let error):
                 DispatchQueue.main.async {  [unowned self] in
-                    self.loadingState = .failed(error)
+                    self.loadingState = .failed(error.localizedDescription)
                 }
             }
         }
